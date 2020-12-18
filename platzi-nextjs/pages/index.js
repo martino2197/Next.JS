@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar/Navbar";
 
-const Home = () => {
-    return (
-        <div>
-            <Navbar />
-            <h1>Hola Platzi</h1>
-        </div>
-    )
-}
+const HomePage = () => {
+  const [productList, setProductList] = useState([]);
 
-export default Home
+  useEffect(() => {
+    window
+      .fetch("/api/avo")
+      .then((response) => response.json())
+      .then(({ data, length }) => {
+        setProductList(data);
+      });
+  }, []);
+
+  return (
+    <div>
+      <Navbar />
+      <div>Platzi and Next.js!</div>
+      {productList.map((product) => (
+        <div>{product.image}</div>
+      ))}
+    </div>
+  );
+};
+
+export default HomePage;
