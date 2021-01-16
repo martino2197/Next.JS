@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "@components/Navbar/Navbar";
 
 const HomePage = () => {
   const [productList, setProductList] = useState([]);
@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div>Platzi and Next.js!</div>
       {productList.map((product) => (
         <div>{product.image}</div>

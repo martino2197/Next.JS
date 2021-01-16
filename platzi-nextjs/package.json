@@ -6,8 +6,8 @@
   "scripts": {
     "dev:inspect": "npm --node-options=--inspect=0.0.0.0:9229 run dev",
     "dev": "next",
-    "build": "next build", 
-    "start": "next start", 
+    "build": "next build",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
