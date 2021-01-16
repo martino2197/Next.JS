@@ -1,4 +1,6 @@
 import { AppProps } from "next/app";
+import "semantic-ui-css/semantic.min.css";
+import "../global.css";
 import Layout from "@components/Layout/Layout";
 
 // Global CSS
